@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "mangi@wp.pl",
+      "password": "haslo234",
+      "username": "mango"
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "firstName": "Jan",
+      "surname": "Kowalski",
+      "email": "test@gmail.com",
+      "phone": "122142544",
+      "address": "Miasto ul. Testtowa 12",
+      "postcode": "111-11"
+    }
+  ]
+}
