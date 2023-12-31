@@ -8,27 +8,31 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   hide = true;
-  registerForm = new FormGroup({
-    email: new FormControl('', [
-      Validators.email,
-      Validators.minLength(5),
-      Validators.maxLength(50),
-    ]),
-    username: new FormControl('', [Validators.required]),
-    password: new FormControl('', { validators: [Validators.required] }),
-  });
+  registerForm = new FormGroup(
+    {
+      email: new FormControl('', [
+        Validators.email,
+        Validators.minLength(5),
+        Validators.maxLength(50),
+      ]),
+      username: new FormControl('', [Validators.required]),
+      password: new FormControl('', { validators: [Validators.required] }),
+    },
+    { updateOn: 'submit' },
+  );
 
   get controls() {
     return this.registerForm.controls;
   }
+
   ngOnInit(): void {
     // this.registerForm.controls.email.valueChanges.subscribe((text) => {
     //   console.log(text);
     // });
     console.log('');
-    this.registerForm.controls.email.hasError('email');
+    // this.registerForm.controls.email.hasError('email');
     // this.registerForm.controls.email.disable();
-    this.controls.username.addValidators(Validators.minLength(5));
+    // this.controls.username.addValidators(Validators.minLength(5));
     // this.controls.username.setValidators(Validators.minLength(5)); // addValidator() jest lepszy poniewa nie nadpisuje wcześniej doodanych walidatatorów
   }
 
