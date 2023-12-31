@@ -28,6 +28,8 @@ export class RegisterComponent implements OnInit {
     console.log('');
     this.registerForm.controls.email.hasError('email');
     // this.registerForm.controls.email.disable();
+    this.controls.username.addValidators(Validators.minLength(5));
+    // this.controls.username.setValidators(Validators.minLength(5)); // addValidator() jest lepszy poniewa nie nadpisuje wcześniej doodanych walidatatorów
   }
 
   getErrorMessage(control: FormControl) {
