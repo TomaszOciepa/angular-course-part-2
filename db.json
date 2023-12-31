@@ -5,6 +5,18 @@
       "email": "mangi@wp.pl",
       "password": "pass123",
       "username": "mango"
+    },
+    {
+      "email": "test@gmail.com",
+      "username": "testowy",
+      "password": "pass12345",
+      "id": 2
+    },
+    {
+      "email": "a@gmail.com",
+      "username": "andrew",
+      "password": "andrew123",
+      "id": 3
     }
   ],
   "clients": [

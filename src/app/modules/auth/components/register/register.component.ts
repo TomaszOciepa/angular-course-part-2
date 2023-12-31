@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { PostUser } from 'src/app/modules/core/models/user.model';
+import { AuthService } from 'src/app/modules/core/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -10,16 +13,32 @@ export class RegisterComponent implements OnInit {
   hide = true;
   registerForm = new FormGroup(
     {
-      email: new FormControl('', [
-        Validators.email,
-        Validators.minLength(5),
-        Validators.maxLength(50),
-      ]),
-      username: new FormControl('', [Validators.required]),
-      password: new FormControl('', { validators: [Validators.required] }),
+      email: new FormControl('', {
+        validators: [
+          Validators.email,
+          Validators.minLength(5),
+          Validators.maxLength(50),
+        ],
+        nonNullable: true,
+      }),
+      username: new FormControl('', {
+        validators: [Validators.required],
+        nonNullable: true,
+      }),
+      password: new FormControl('', {
+        validators: [Validators.required],
+        nonNullable: true,
+      }),
     },
     { updateOn: 'submit' },
   );
+
+  errorMessage = '';
+
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+  ) {}
 
   get controls() {
     return this.registerForm.controls;
@@ -35,16 +54,16 @@ export class RegisterComponent implements OnInit {
     // this.controls.username.addValidators(Validators.minLength(5));
     // this.controls.username.setValidators(Validators.minLength(5)); // addValidator() jest lepszy poniewa nie nadpisuje wcześniej doodanych walidatatorów
 
-    this.controls.username.setValue('test1');
-    this.registerForm.setValue({
-      email: 'test@wk.pl',
-      username: '',
-      password: '',
-    });
+    // this.controls.username.setValue('test1');
+    // this.registerForm.setValue({
+    //   email: 'test@wk.pl',
+    //   username: '',
+    //   password: '',
+    // });
 
-    this.registerForm.patchValue({
-      email: 'test@wk.pl',
-    });
+    // this.registerForm.patchValue({
+    //   email: 'test@wk.pl',
+    // });
   }
 
   getErrorMessage(control: FormControl) {
@@ -64,7 +83,16 @@ export class RegisterComponent implements OnInit {
   }
 
   onRegister() {
-    console.log(this.registerForm.value);
+    const userData: PostUser = this.registerForm.getRawValue();
+    this.authService.register(userData).subscribe({
+      next: () => {
+        this.router.navigate(['/logowanie']);
+      },
+      error: (err) => {
+        this.errorMessage = 'Wystąpił błąd.';
+      },
+    });
+    // console.log(this.registerForm.value);
     // console.log(this.registerForm.getRawValue());
   }
 }
