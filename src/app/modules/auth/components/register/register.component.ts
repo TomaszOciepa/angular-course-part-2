@@ -34,6 +34,17 @@ export class RegisterComponent implements OnInit {
     // this.registerForm.controls.email.disable();
     // this.controls.username.addValidators(Validators.minLength(5));
     // this.controls.username.setValidators(Validators.minLength(5)); // addValidator() jest lepszy poniewa nie nadpisuje wcześniej doodanych walidatatorów
+
+    this.controls.username.setValue('test1');
+    this.registerForm.setValue({
+      email: 'test@wk.pl',
+      username: '',
+      password: '',
+    });
+
+    this.registerForm.patchValue({
+      email: 'test@wk.pl',
+    });
   }
 
   getErrorMessage(control: FormControl) {
