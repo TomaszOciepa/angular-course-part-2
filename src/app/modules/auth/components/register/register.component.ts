@@ -23,11 +23,8 @@ export class RegisterComponent implements OnInit {
     this.registerForm.controls.email.disable();
   }
 
-  enableControl() {
-    this.registerForm.controls.email.enable();
-  }
-
   onRegister() {
     console.log(this.registerForm.value);
+    console.log(this.registerForm.getRawValue());
   }
 }
