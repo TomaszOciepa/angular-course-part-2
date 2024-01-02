@@ -46,6 +46,8 @@ export class ClientComponent implements OnInit {
       data: {
         client: this.client,
       },
+      width: '600px',
+      maxWidth: '600px',
     });
   }
 }
