@@ -46,15 +46,6 @@
       "phone": "122142544",
       "address": "Miasto ul. Testtowa 12",
       "postcode": "111-11"
-    },
-    {
-      "firstname": "Andrzej",
-      "surname": "Surn",
-      "email": "an@wp.pl",
-      "phone": "32424",
-      "address": "Gdańsk",
-      "postcode": "80-283",
-      "id": 4
     }
   ]
 }
