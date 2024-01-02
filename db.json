@@ -22,9 +22,27 @@
   "clients": [
     {
       "id": 1,
-      "firstName": "Jan",
+      "firstname": "Jan",
       "surname": "Kowalski",
       "email": "test@gmail.com",
+      "phone": "122142544",
+      "address": "Miasto ul. Testtowa 12",
+      "postcode": "111-11"
+    },
+    {
+      "id": 2,
+      "firstname": "Jan",
+      "surname": "Nowak",
+      "email": "nowak@gmail.com",
+      "phone": "122142544",
+      "address": "Miasto ul. Testtowa 12",
+      "postcode": "111-11"
+    },
+    {
+      "id": 3,
+      "firstname": "Rychu",
+      "surname": "Peja",
+      "email": "rys@gmail.com",
       "phone": "122142544",
       "address": "Miasto ul. Testtowa 12",
       "postcode": "111-11"
