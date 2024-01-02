@@ -21,13 +21,13 @@
   ],
   "clients": [
     {
-      "id": 1,
-      "firstname": "Jan",
+      "firstname": "Piotr",
       "surname": "Kowalski",
       "email": "test@gmail.com",
       "phone": "122142544",
-      "address": "Miasto ul. Testtowa 12",
-      "postcode": "111-11"
+      "address": "Gdańsk ul. Grunwaldzaka 20",
+      "postcode": "111-11",
+      "id": 1
     },
     {
       "id": 2,
@@ -46,6 +46,15 @@
       "phone": "122142544",
       "address": "Miasto ul. Testtowa 12",
       "postcode": "111-11"
+    },
+    {
+      "firstname": "Irek",
+      "surname": "Wawa",
+      "email": "janurs@wp.pl",
+      "phone": "23423",
+      "address": "Tczew",
+      "postcode": "87-333",
+      "id": 4
     }
   ]
 }

@@ -3,6 +3,12 @@
     <p>Usun klienta</p>
     <button mat-raised-button color="warn" (click)="openDialog()">Usuń</button>
   </div>
+  <div>
+    <p>Edytuj klienta</p>
+    <button mat-raised-button color="primary" (click)="openEditDialog()">
+      Edytuj
+    </button>
+  </div>
   <p>Dane Klienta:</p>
   <p>{{ client.firstname }} {{ client.surname }}</p>
   <p>Adres e-mail: {{ client.email }}</p>
