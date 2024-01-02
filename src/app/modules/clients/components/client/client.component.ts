@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs';
+import { Client } from 'src/app/modules/core/models/client.model';
 import { ClientsService } from 'src/app/modules/core/services/clients.service';
 
 @Component({
@@ -9,6 +10,8 @@ import { ClientsService } from 'src/app/modules/core/services/clients.service';
   styleUrls: ['./client.component.scss'],
 })
 export class ClientComponent implements OnInit {
+  client!: Client;
+
   constructor(
     private clientsService: ClientsService,
     private route: ActivatedRoute,
@@ -19,7 +22,7 @@ export class ClientComponent implements OnInit {
       .pipe(switchMap((params) => this.clientsService.getClient(+params['id'])))
       .subscribe({
         next: (client) => {
-          console.log(client);
+          this.client = client;
         },
       });
   }
