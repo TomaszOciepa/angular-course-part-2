@@ -14,6 +14,8 @@ export class ClientsTableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
+  totalCount = 0;
+
   displayedColumns: string[] = [
     'id',
     'firstname',
@@ -28,8 +30,9 @@ export class ClientsTableComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.clientsService.getClients().subscribe({
-      next: (clients) => {
-        this.dataSource = new MatTableDataSource<Client>(clients);
+      next: (response) => {
+        this.totalCount = response.totalCount;
+        this.dataSource = new MatTableDataSource<Client>(response.clients);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
       },
