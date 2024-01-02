@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlertComponent } from './components/alert/alert.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [AlertComponent],
@@ -13,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     MaterialModule,
     FormsModule,
+    MatSortModule,
+    MatPaginatorModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
