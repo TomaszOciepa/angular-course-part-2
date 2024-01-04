@@ -79,7 +79,7 @@ export class ClientFormComponent implements OnInit {
       }),
       postcode: new FormControl(this.editMode ? this.client.postcode : '', {
         nonNullable: true,
-        validators: [Validators.required, ClientValidators.postcode],
+        validators: [Validators.required, ClientValidators.postcode()],
       }),
     });
   }
