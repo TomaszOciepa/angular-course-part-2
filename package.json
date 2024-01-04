@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "start:backend": "json-server --watch db.json",
+    "start:server": "http-server -p 8080 -c-1 dist/rejestr-klientow",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
@@ -42,6 +43,7 @@
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
+    "http-server": "^14.1.1",
     "jasmine-core": "~4.6.0",
     "json-server": "^0.17.3",
     "karma": "~6.4.0",
