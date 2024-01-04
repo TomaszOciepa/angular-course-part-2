@@ -7,9 +7,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialogModule } from '@angular/material/dialog';
 import { A11yModule } from '@angular/cdk/a11y';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
-  declarations: [AlertComponent],
+  declarations: [AlertComponent, HighlightDirective],
   imports: [CommonModule],
   exports: [
     CommonModule,
@@ -21,6 +22,7 @@ import { A11yModule } from '@angular/cdk/a11y';
     ReactiveFormsModule,
     AlertComponent,
     A11yModule,
+    HighlightDirective,
   ],
 })
 export class SharedModule {}
