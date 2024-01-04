@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertComponent } from './components/alert/alert.component';
-import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -20,7 +19,6 @@ import { A11yModule } from '@angular/cdk/a11y';
     MatPaginatorModule,
     MatDialogModule,
     ReactiveFormsModule,
-    HttpClientModule,
     AlertComponent,
     A11yModule,
   ],
