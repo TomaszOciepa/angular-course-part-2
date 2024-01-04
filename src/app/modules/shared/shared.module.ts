@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlertComponent } from './components/alert/alert.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
@@ -21,7 +20,6 @@ import { A11yModule } from '@angular/cdk/a11y';
     MatPaginatorModule,
     MatDialogModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
     HttpClientModule,
     AlertComponent,
     A11yModule,
