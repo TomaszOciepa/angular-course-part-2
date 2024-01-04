@@ -8,9 +8,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialogModule } from '@angular/material/dialog';
 import { A11yModule } from '@angular/cdk/a11y';
 import { HighlightDirective } from './directives/highlight.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
-  declarations: [AlertComponent, HighlightDirective],
+  declarations: [AlertComponent, HighlightDirective, UnlessDirective],
   imports: [CommonModule],
   exports: [
     CommonModule,
@@ -23,6 +24,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     AlertComponent,
     A11yModule,
     HighlightDirective,
+    UnlessDirective,
   ],
 })
 export class SharedModule {}
